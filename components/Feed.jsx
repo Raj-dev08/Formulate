@@ -39,7 +39,6 @@ const Feed = () => {
   const filterPrompts = (searchtext) => {
     return allPosts.filter(
       (item) =>
-        item.creator.username.toLowerCase().includes(searchtext.toLowerCase()) ||
         item.tag.toLowerCase().includes(searchtext.toLowerCase()) ||
         item.formula.toLowerCase().includes(searchtext.toLowerCase())
     );
@@ -70,7 +69,7 @@ const Feed = () => {
       <form className='relative w-full flex-center'>
         <input
           type='text'
-          placeholder='Search for a tag or a username'
+          placeholder='Search for a tag'
           value={searchText}
           onChange={handleSearchChange}
           required
