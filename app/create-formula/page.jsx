@@ -8,7 +8,7 @@ import Form from "@/components/Form";
 
 const CreateFormula = () => {
   const router = useRouter();
-  const { data: session} = useSession();
+  // const { data: session} = useSession();
 
   const [submitting, setIsSubmitting] = useState(false);
   const [post, setPost] = useState({ formula: "", tag: "" });
@@ -24,7 +24,6 @@ const CreateFormula = () => {
         method: "POST",
         body: JSON.stringify({
           formula: post.formula,
-          userId: session?.user.id,
           tag: post.tag,
         }),
       });

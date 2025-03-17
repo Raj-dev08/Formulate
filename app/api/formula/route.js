@@ -5,7 +5,7 @@ export const GET = async (request) => {
     try {
         await connectToDB()
 
-        const formula = await Formula.find({}).populate('creator')
+        const formula = await Formula.find({})
 
         return new Response(JSON.stringify(formula), { status: 200 })
     } catch (error) {
