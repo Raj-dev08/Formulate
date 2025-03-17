@@ -105,6 +105,9 @@ const Nav = () => {
           </div>
         ) : (
           <>
+          <Link href='/create-formula' className='black_btn'>
+              Post Formula
+            </Link>
             {providers &&
               Object.values(providers).map((provider) => (
                 <button
